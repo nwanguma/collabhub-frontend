@@ -1,0 +1,18 @@
+import { Activity, Project, Profile, ProjectsWithPagination, ProfilesWithPagination, IPagination, Comment, IFilters } from "@/common/constants";
+export declare const fetchActivities: () => Promise<Activity[]>;
+export declare const fetchProjectsData: (pagination: any, contentType: string) => Promise<ProjectsWithPagination>;
+export declare const fetchProject: (id: string) => Promise<Project>;
+export declare const deleteProject: (projectId: string) => Promise<any>;
+export declare const deleteProjectFeedback: (projectId: string, feedbackId: string) => Promise<any>;
+export declare const fetchProjects: (pagination: IPagination, filters: IFilters) => Promise<ProjectsWithPagination>;
+export declare const fetchProfile: (id: string) => Promise<Profile>;
+export declare const fetchProfiles: (pagination: IPagination, filters: IFilters) => Promise<ProfilesWithPagination>;
+export declare const followUser: (profileId: string) => Promise<any>;
+export declare const unfollowUser: (profileId: string) => Promise<any>;
+export declare const initiateConversation: (recipientId: string) => Promise<any>;
+export declare const createComment: (resource: string, resourceId: string, data: Partial<Comment>) => Promise<any>;
+export declare const createReaction: (resource: string, resourceId: string) => Promise<any>;
+export declare const deleteComment: (resource: string, resourceId: string, commentId: string) => Promise<any>;
+export declare const fetchMessages: (conversationId: string, pagination: IPagination) => Promise<any>;
+export declare const fetchMessagesLong: (conversationId: string, pagination: IPagination) => Promise<any>;
+export declare const sendMessage: (message: any) => Promise<any>;

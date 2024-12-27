@@ -1,0 +1,1 @@
+{"version":3,"file":"react-query-client.js","sourceRoot":"/","sources":["lib/react-query-client.ts"],"names":[],"mappings":";;AAAA,uDAAoD;AAEpD,MAAM,WAAW,GAAG,IAAI,yBAAW,EAAE,CAAC;AAEtC,kBAAe,WAAW,CAAC","sourcesContent":["import { QueryClient } from \"@tanstack/react-query\";\n\nconst queryClient = new QueryClient();\n\nexport default queryClient;\n"]}

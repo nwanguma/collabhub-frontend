@@ -1,0 +1,18 @@
+import { Connections } from "@/common/constants";
+import { DateInfo, FormatDateOptions } from "./constants";
+import { CustomError } from "./class";
+export declare const formatDateShort: (dateString: string, { monthType, weekdayType }: FormatDateOptions) => DateInfo;
+export declare const truncateString: (str: string, maxLength: number) => string;
+export declare const timeAgo: (dateString: string) => string;
+export declare const formatDateLong: (dateString: string) => string;
+export declare const getFilenameAndExtension: (url: string) => string;
+export declare const stripHtml: (html: string) => string;
+export declare const getHasFollowed: (connections: Connections, followingProfileId: string) => any;
+export declare const decryptData: (encryptedData: string, iv: string, key: string) => Record<string, any> | null;
+export declare function isWithinLast10Minutes(lastSeen: Date): boolean;
+export declare function getTime(date: Date): string;
+export declare function sanitizeFile(file: File): File;
+export declare function serializeData<T extends Record<string, any>>(data: T): T;
+export declare function formatErrorResponse(error: CustomError): string;
+export declare const capitalizeFirstLetter: (text: string) => string;
+export declare const arraysEqual: (arr1: string[], arr2: string[]) => boolean;
