@@ -78,7 +78,7 @@ Please find recorded demos below
 
 5. The app should now be running at [http://localhost:3000](http://localhost:3000).
 
-6. The server lives in a different repo at [https://github.com/nwanguma/collabhub-api](Collabhub-api). Please follow instructions in the backend's readme to run the app end-to-end
+6. The server lives in a different repo at [Collabhub-api](https://github.com/nwanguma/collabhub-api). Please follow instructions in the backend's readme to run the app end-to-end
 
 ## **Contributing**
 
