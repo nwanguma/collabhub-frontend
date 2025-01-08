@@ -23,7 +23,7 @@ const HomeNav = ({
 
   return (
     <>
-      <nav className="flex justify-between items-center px-2 sm:px-6 h-10">
+      <nav className="flex justify-between items-center h-14">
         <ul className="flex items-center">
           <li className="hover:scale-110 transform transition duration-300">
             <LogoWithText />

@@ -9,12 +9,12 @@ const selectConversations = (state: RootState) => state.conversations;
 
 export const selectProfilesRecommendations = createSelector(
   selectRecommendations,
-  (recommendations) => [...recommendations.profiles]
+  (recommendations) => [...recommendations?.profiles]
 );
 
 export const selectProjectRecommendations = createSelector(
   selectRecommendations,
-  (recommendations) => [...recommendations.projects]
+  (recommendations) => [...recommendations?.projects]
 );
 
 export const selectIsRecommendationsLoading = createSelector(

@@ -12,7 +12,7 @@ const LogoWithText = () => {
         height={0}
       />
       <span className="hidden sm:block text-blue-700 font-medium text-base sm:text-lg">
-        collabhub
+        Collabhub
       </span>
     </Link>
   );

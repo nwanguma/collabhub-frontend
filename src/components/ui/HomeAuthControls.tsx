@@ -60,7 +60,7 @@ const HomeAuthControls = ({
       )}
       {!main && (
         <AuthButton
-          text="Kickstart Your Next Big Project"
+          text="Everything you need to level up!"
           variant="filled"
           onClick={() => setRegisterModalIsOpen((o) => !o)}
         />

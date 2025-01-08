@@ -10,7 +10,9 @@ const NotFoundPage: React.FC = ({ searchParams, params }: any) => {
   return (
     <div className="flex flex-col w-full h-screen bg-white">
       <header className="w-full border-b border-b-gray-200 py-4 bg-white">
-        <HomeNav actionParam={actionParam} pathname={pathname} />
+        <div className="px-[2.5vw]">
+          <HomeNav actionParam={actionParam} pathname={pathname} />
+        </div>
       </header>
       <div className="flex-grow w-full flex flex-col justify-center relative">
         <div className="w-11/12 sm:w-10/12 lg:w-7/12 mx-auto space-y-2 sm:space-y-3">

@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import { Toaster } from "react-hot-toast";
 
 import HomeAuthControls from "@/components/ui/HomeAuthControls";
-import { Toaster } from "react-hot-toast";
 import HomeNav from "@/components/ui/HomeNav";
 
 const riderText = [
@@ -30,63 +30,120 @@ const Home: React.FC<HomeProps> = ({ searchParams, params }) => {
 
   return (
     <>
-      <div className="w-full">
-        <header className="w-full min-h-screen py-4 bg-gradient-to-r from-blue-100 via-purple-100 to-white">
-          <HomeNav actionParam={actionParam} pathname={pathname} />
-          <div className="w-full min-h-[calc(100vh-10%)] flex">
-            <div className="flex items-center flex-col w-11/12 lg:w-9/12 xl:w-10/12 mx-auto mt-[12%] lg:mt-[6%] 2xl:mt-[8%]">
-              <div className="bg-blue-100 text-blue-600 text-md px-2 rounded flex space-x-1 items-center">
-                <span>{riderText[riderTextDisplayIndex]}</span>
-                <Image
-                  src="/icons/work-color.svg"
-                  width={15}
-                  height={15}
-                  alt="work"
-                />
+      <div className="w-full h-screen overflow-hidden">
+        <header className="w-full h-screen flex flex-col py-[3.5vw] px-[3vw] bg-white">
+          <div className="flex flex-1">
+            <div className="w-full lg:w-1/2 h-full px-[2.5vw]">
+              <HomeNav actionParam={actionParam} pathname={pathname} />
+              <div className="h-full flex justify-center items-center">
+                <div className="">
+                  <div className="text-md px-[0.1vw] rounded flex space-x-1">
+                    <span>{riderText[riderTextDisplayIndex]}</span>
+                    <Image
+                      src="/icons/work-color.svg"
+                      width={15}
+                      height={15}
+                      alt="work"
+                    />
+                  </div>
+                  <div className="w-full text-3xl lg:text-4xl xl:text-5xl font-bold mt-[0.2vw] mb-[2vw] text-gray-800">
+                    Join <span className="text-blue-700">CollabHub</span> to{" "}
+                    <br />
+                    discover top talent
+                    <br />
+                    collaborate on projects
+                    <br />
+                    and unlock opportunities
+                  </div>
+                  <div className="mb-[1vw] text-gray-600 w-5/6 text-sm sm:text-base lg:text-lg">
+                    Connect with professionals, explore exciting projects, and
+                    find your next career move in one dynamic platform
+                    <Image
+                      src="/icons/celebration.svg"
+                      width={16}
+                      height={16}
+                      alt="work"
+                      className="ml-1 -mt-1 inline"
+                    />
+                  </div>
+                  <div className="mt-4 md:mt-6">
+                    <HomeAuthControls />
+                  </div>
+                </div>
               </div>
-              <div className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center mt-2 mb-8 md:mb-10 lg:mb-10 text-gray-800">
-                Join <span className="text-blue-700">CollabHub</span> to{" "}
-                <br></br>
-                discover top <span className="text-blue-700">talent</span>{" "}
-                <br></br> collaborate on{" "}
-                <span className="text-blue-700">projects</span>
-                <br></br> and unlock new{" "}
-                <span className="text-blue-700">job opportunities</span>
-              </div>
-              <div className="mb-4 text-gray-500 w-full md:w-2/3 lg:w-1/2 text-center text-lg-xl">
-                Connect with professionals, explore exciting projects, and find
-                your next career move in one dynamic platform
-                <Image
-                  src="/icons/celebration.svg"
-                  width={16}
-                  height={16}
-                  alt="work"
-                  className="ml-1 -mt-1 inline"
-                />
-              </div>
-              <div className="w-full md:w-2/3 lg:w-1/2 text-center space-x-3 space-y-3 pb-1 md:pb-3">
-                {[
-                  { title: "JavaScript" },
-                  { title: "TypeScript" },
-                  { title: "Front-end" },
-                  { title: "React" },
-                  { title: "Node.js" },
-                  { title: "Next.js" },
-                  { title: "Go" },
-                  { title: "Design" },
-                  { title: "UI/UX" },
-                  { title: "Docker" },
-                ].map((skill) => (
-                  <span
-                    key={skill.title}
-                    className="inline-block capitalize text-sm border border-violet-500 text-violet-500 py-1 px-2 sm:py-2 sm:px-3 rounded"
-                  >
-                    {skill.title}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-4 md:mt-6">
-                <HomeAuthControls />
+            </div>
+            <div className="hidden lg:block flex-1 h-full">
+              <div className="flex flex-col bg-blue-700 h-full rounded-2xl p-[2.5vw]">
+                <div className="flex-1 flex flex-col justify-between">
+                  {[
+                    {
+                      title: "Connect with Developers",
+                      description:
+                        "Find and collaborate with talented developers worldwide.",
+                      icon: "/icons/connection.svg",
+                    },
+                    {
+                      title: "Post Your Projects",
+                      description:
+                        "Share your projects and attract collaborators with ease.",
+                      icon: "/icons/home-projects.svg",
+                    },
+                    {
+                      title: "Find Your Perfect Team",
+                      description:
+                        "Discover like-minded devs to help you bring ideas to life.",
+                      icon: "/icons/team.svg",
+                    },
+                    {
+                      title: "Get Real-Time Feedback",
+                      description:
+                        "Receive instant insights from a community of experts.",
+                      icon: "/icons/home-feedback.svg",
+                    },
+                    {
+                      title: "Showcase Your Skills",
+                      description:
+                        "Highlight your expertise and stand out in the dev community.",
+                      icon: "/icons/work.svg",
+                    },
+                    {
+                      title: "Explore New Opportunities",
+                      description:
+                        "Work on exciting projects that match your passion and skills.",
+                      icon: "/icons/global.svg",
+                    },
+                    {
+                      title: "Grow Together",
+                      description:
+                        "Collaborate, learn, and thrive with a network of innovators.",
+                      icon: "/icons/growth.svg",
+                    },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex rounded-lg border bg-blue-600 text-white font-medium p-[1vw] items-center"
+                    >
+                      <div className="w-[2vw] h-[2vw] flex justify-center items-center bg-blue-700 mr-[1vw] rounded-lg p-[0.3vw]">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={item.icon}
+                            alt=""
+                            layout="fill"
+                            objectFit="contain"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="mb-[0.1vw] capitalize font-medium">
+                          {item.title}
+                        </div>
+                        <div className="capitalize font-light text-sm">
+                          {item.description}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
