@@ -35,7 +35,7 @@ export default function RootLayout({
       <head>
         <Script
           src="https://cloud.umami.is/script.js"
-          data-website-id="b5c445b7-e2a9-465f-a10d-290c42bebb2e"
+          data-website-id="05ea3906-c425-458f-8996-3b38af848f9b"
           strategy="lazyOnload"
         />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />

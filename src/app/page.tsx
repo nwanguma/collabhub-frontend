@@ -134,10 +134,10 @@ const Home: React.FC<HomeProps> = ({ searchParams, params }) => {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <div className="mb-[0.1vw] capitalize font-medium">
+                        <div className="mb-[0.1vw] font-medium">
                           {item.title}
                         </div>
-                        <div className="capitalize font-light text-sm">
+                        <div className="font-light text-sm">
                           {item.description}
                         </div>
                       </div>
